@@ -27,6 +27,14 @@ Got to jenkins job
 Execute shell 
 docker build . -t node-app-todo
 docker run -d --name node-app-container -p 8000:8000 node-app-todo
+#error occurs
+cd /var/lib/jenkins/workspace
+chmod 777 todo-node-app
+cd
+sudo usermod -a -G docker jenkins
+systemctl restart jenkins
+   
+
 
 
 
